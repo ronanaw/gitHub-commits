@@ -112,14 +112,14 @@ The function uses the repositorie' list and commit list from the above function 
 
 Configure the Solution's $.Settings before sending emails
 
-To : $.Settings.receiver_mail
+- To : $.Settings.receiver_mail
 
 - Sender 
   - `From` : $.Settings.sender_mail
 
 - Credentials:
- - `usnername` : $.Settings.mail_username
- - `password` : $.Settings.mail_userpassword
+   - `username` : $.Settings.mail_username
+   - `password` : $.Settings.mail_userpassword
 
 Parameters: 
  - `per_page`: integer query.  Results per page (max 100)
