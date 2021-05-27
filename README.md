@@ -122,13 +122,13 @@ From : $.Settings.sender_mail
 o Username : $.Settings.mail_username
 o Password : $.Settings.mail_userpassword
 
-Enter parameters as follows:
-- Per_page: 1
+Parameters: 
+- Per_page: integer query.  Results per page (max 100)
 - Since: start date of commits (e.g Yesterday`s date or any other date before ‘until date below’: 2021-05-26)
 - Until: end date of commits (e.g Today`s date : 2021-05-27)
 
 ---
-Running the Sample
+## Running the Sample
 
 Click on the function named RUN
 Enter parameters as follows:
