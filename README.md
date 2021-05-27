@@ -109,9 +109,9 @@ Parameters:
 
 ### MailCommitForRepo
 The function uses the repositories' list and commit list from the above function and mail the commit details to the recipient.
-- Linx email configuration
-   - [Linx email configuration](https://linx.software/docs/reference/plugins/email/content/sendemail/)   
+
 #### Configure the Solution's $.Settings before sending emails
+- [Linx email configuration](https://linx.software/docs/reference/plugins/email/content/sendemail/) 
 
 - To : $.Settings.receiver_mail
 
