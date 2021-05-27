@@ -108,10 +108,10 @@ Parameters:
 | per_page     |integer query  | Results per page (max 100). Default: 30. |
 
 ### MailCommitForRepo
-
-The function uses the repositorie' list and commit list from the above function and mail the commit details to the recipient.
-
-Configure the Solution's $.Settings before sending emails
+The function uses the repositories' list and commit list from the above function and mail the commit details to the recipient.
+- Linx email configuration
+   - [Linx email configuration](https://linx.software/docs/reference/plugins/email/content/sendemail/)   
+#### Configure the Solution's $.Settings before sending emails
 
 - To : $.Settings.receiver_mail
 
