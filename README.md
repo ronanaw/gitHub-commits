@@ -98,8 +98,6 @@ https://docs.github.com/en/rest/reference/repos#list-commits
 
 Parameters:
 
-
-
 | Parameter      |    Type            |   					    |
 | -------------  |------------- | ------------------------------------------|
 | repo         |string query   | Repositories` name                    |
@@ -107,7 +105,6 @@ Parameters:
 | until        |string query   | Only commits before this date will be returned. This is a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.|
 | per_page     |integer query  | queryResults per page (max 100).
 Default: 30. |
- 
 
 
 ### MailCommitForRepo
@@ -116,14 +113,19 @@ The function uses the repositories` list and commit list from the above function
 
 Configure the Solution's $.Settings before sending emails
 
-To: $.Settings.receiver_mail
+To : $.Settings.receiver_mail
 
 - Sender 
-From: $.Settings.sender_mail
+From : $.Settings.sender_mail
 
 - Credentials:
-o Username: $.Settings.mail_username
-o Password: $.Settings.mail_userpassword
+o Username : $.Settings.mail_username
+o Password : $.Settings.mail_userpassword
+
+Enter parameters as follows:
+- Per_page: 1
+- Since: start date of commits (e.g Yesterday`s date or any other date before ‘until date below’: 2021-05-26)
+- Until: end date of commits (e.g Today`s date : 2021-05-27)
 
 ---
 Running the Sample
