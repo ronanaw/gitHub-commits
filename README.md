@@ -1,4 +1,4 @@
-﻿# GitHub integration
+# GitHub integration
 
 ## Overview
 
@@ -27,7 +27,7 @@ The provided sample includes:
 
 ### Linx Designer
 
-This solution was developed in the Linx Designer `v5.20.2.0`
+This solution was developed in the Linx Designer `v5.21.0.0`
 
 ---
 
@@ -84,5 +84,54 @@ User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) 
 
 ## Utilities 
 
+### GetReposForOwner
 
+Lists repositories for the specified organization.
+
+https://docs.github.com/en/rest/reference/repos#list-organization-repositories
+
+### GetCommits
+
+The Repo Commits API supports listing, viewing, and comparing commits in a repository.
+
+https://docs.github.com/en/rest/reference/repos#list-commits
+
+Parameters:
+
+
+
+| Parameter      |    type            |   					    |
+| -------------  |:-------------: | ------------------------------------------:|
+| repo         |string query   | Repositories` name                    |
+| since         |string query   | Only show notifications updated after the given time. This is a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.|
+| until        |string query   | Only commits before this date will be returned. This is a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.|
+| per_page     |integer        | queryResults per page (max 100).
+Default: 30. |
+ 
+
+
+### MailCommitForRepo
+
+The function uses the repositories` list and commit list from the above function and mail the commit details to the recipient.
+
+Configure the Solution's $.Settings before sending emails
+
+To: $.Settings.receiver_mail
+
+- Sender 
+From: $.Settings.sender_mail
+
+- Credentials:
+o Username: $.Settings.mail_username
+o Password: $.Settings.mail_userpassword
+
+---
+Running the Sample
+
+Click on the function named RUN
+Enter parameters as follows:
+
+- Per_page: 1
+- Since: start date of commits (e.g Yesterday`s date or any other date before ‘until date below’: 2021-05-26)
+- Until: end date of commits (e.g Today`s date : 2021-05-27)
 
