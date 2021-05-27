@@ -15,7 +15,7 @@ Once this GitHub-Gmail integration is active, the sample sends out email from th
 
 - [GitHub-Linx integration guide](https://community.linx.software/community/t/oauth-2-0-authentication-github-example/487)
 - [GitHub API authentication documentation](https://docs.github.com/en/rest)
-
+- [GitHub API documentation](https://docs.github.com/en/rest/reference/repos#list-organization-repositories)
 
 ---
 
@@ -44,12 +44,12 @@ Register a new app on GitHub:
 
 Configure the Solution's $.Settings:
 
-1. Open the [sample Solution](Solution.lsoz) in your Linx Designer.
+1. Open the solution in your Linx Designer.
 1. Edit the $.Settings values:
 
    - `client_id`: Your GitHub app’s **Client ID**
    - `client_secret`: Your GitHub app’s **Client Secret**
-   - ‘owner’ : Insert the owner of your repository.  E.g From the link https://github.com/linx-software, linx-software is the owner.  
+   - `owner`: Insert the owner of your repository.  E.g From the link https://github.com/linx-software, linx-software is the owner.  
 
 1. Save the Solution.
 
@@ -101,32 +101,30 @@ Parameters:
 
 | Parameter      |    Type            |   					    |
 | -------------  |------------- | ------------------------------------------|
-| repo         |string query   | Repositories` name                    |
+| repo         |string query   | Repositories' name                    |
 | since         |string query   | Only show notifications updated after the given time. This is a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.|
 | until        |string query   | Only commits before this date will be returned. This is a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.|
-| per_page     |integer query  | queryResults per page (max 100).
-Default: 30. |
-
+| per_page     |integer query  | queryResults per page (max 100). Default: 30. |
 
 ### MailCommitForRepo
 
-The function uses the repositories` list and commit list from the above function and mail the commit details to the recipient.
+The function uses the repositorie' list and commit list from the above function and mail the commit details to the recipient.
 
 Configure the Solution's $.Settings before sending emails
 
 To : $.Settings.receiver_mail
 
 - Sender 
-From : $.Settings.sender_mail
+  - `From` : $.Settings.sender_mail
 
 - Credentials:
-o Username : $.Settings.mail_username
-o Password : $.Settings.mail_userpassword
+ - `usnername` : $.Settings.mail_username
+ - `password` : $.Settings.mail_userpassword
 
 Parameters: 
-- Per_page: integer query.  Results per page (max 100)
-- Since: start date of commits (e.g Yesterday`s date or any other date before ‘until date below’: 2021-05-26)
-- Until: end date of commits (e.g Today`s date : 2021-05-27)
+ - `per_page`: integer query.  Results per page (max 100)
+ - `since`: start date of commits (e.g Yesterday's date or any other date before ‘until date below’: 2021-05-26)
+ - `until`: end date of commits (e.g Today's date : 2021-05-27)
 
 ---
 ## Running the Sample
@@ -134,7 +132,7 @@ Parameters:
 Click on the function named RUN
 Enter parameters as follows:
 
-- Per_page: 1
-- Since: start date of commits (e.g Yesterday`s date or any other date before ‘until date below’: 2021-05-26)
-- Until: end date of commits (e.g Today`s date : 2021-05-27)
+- `Per_page`: 1
+- `Since`: start date of commits (e.g Yesterday's date or any other date before ‘until date below’: 2021-05-26)
+- `Until`: end date of commits (e.g Today's date : 2021-05-27)
 
