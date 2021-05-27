@@ -16,6 +16,7 @@ Once this GitHub-Gmail integration is active, the sample sends out email from th
 - [GitHub-Linx integration guide](https://community.linx.software/community/t/oauth-2-0-authentication-github-example/487)
 - [GitHub API authentication documentation](https://docs.github.com/en/rest)
 - [GitHub API documentation](https://docs.github.com/en/rest/reference/repos#list-organization-repositories)
+- [Linx email configuration](https://linx.software/docs/reference/plugins/email/content/sendemail/)
 
 ---
 
