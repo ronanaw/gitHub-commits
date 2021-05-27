@@ -1,4 +1,4 @@
-# GitHub integration
+# GitHub commits integration with gmail
 
 ## Overview
 
