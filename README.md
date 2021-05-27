@@ -104,7 +104,7 @@ Parameters:
 | repo         |string query   | Repositories' name                    |
 | since         |string query   | Only show notifications updated after the given time. This is a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.|
 | until        |string query   | Only commits before this date will be returned. This is a timestamp in ISO 8601 format: YYYY-MM-DDTHH:MM:SSZ.|
-| per_page     |integer query  | queryResults per page (max 100). Default: 30. |
+| per_page     |integer query  | Results per page (max 100). Default: 30. |
 
 ### MailCommitForRepo
 
