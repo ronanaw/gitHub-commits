@@ -6,7 +6,8 @@ The provided sample includes:
 
 - Generating GitHub API access tokens via OAuth 2.0.
 - Authenticating and connecting to the GitHub API via Linx
-- Template requests: Retrieving and sending data to the GitHub API via HTTP requests.
+- Send emails from Gmail for GitHub commits for a time period. This sample shows how Linx automatically sends an email from Gmail.
+Once this GitHub-Gmail integration is active, the sample sends out email from the Gmail account. This email can be directed to you or any others you want to alert containing the information concerning the commits you want to pass on.
 
 ---
 
