@@ -61,7 +61,23 @@ Generate access tokens:
 3. You will be redirected to the GitHub OAuth 2.0 access consent screen.
 4. Authorize the connected application.
 5. View success message.
+---
+#### Configure the Solution's $.Settings before sending emails
+- [Linx email configuration](https://linx.software/docs/reference/plugins/email/content/sendemail/) will help you get started with email plugin in Linx.
 
+- To : $.Settings.receiver_mail
+
+- Sender 
+  - `From` : $.Settings.sender_mail
+
+- Credentials:
+   - `username` : $.Settings.mail_username
+   - `password` : $.Settings.mail_userpassword
+
+Parameters: 
+ - `per_page`: integer query.  Results per page (max 100)
+ - `since`: start date of commits (e.g Yesterday's date or any other date before ‘until date below’: 2021-05-26)
+ - `until`: end date of commits (e.g Today's date : 2021-05-27)
 ---
 
 ## Using the sample
@@ -109,24 +125,6 @@ Parameters:
 
 ### MailCommitForRepo
 The function uses the repositories' list and commit list from the above function and mail the commit details to the recipient.
-
-#### Configure the Solution's $.Settings before sending emails
-- [Linx email configuration](https://linx.software/docs/reference/plugins/email/content/sendemail/) 
-
-- To : $.Settings.receiver_mail
-
-- Sender 
-  - `From` : $.Settings.sender_mail
-
-- Credentials:
-   - `username` : $.Settings.mail_username
-   - `password` : $.Settings.mail_userpassword
-
-Parameters: 
- - `per_page`: integer query.  Results per page (max 100)
- - `since`: start date of commits (e.g Yesterday's date or any other date before ‘until date below’: 2021-05-26)
- - `until`: end date of commits (e.g Today's date : 2021-05-27)
-
 ---
 ## Running the Sample
 
